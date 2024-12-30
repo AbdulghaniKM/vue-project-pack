@@ -1,7 +1,7 @@
 <template>
-  <main class="min-h-screen bg-gray-900 py-12 px-4 sm:px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto">
-      <h1 class="text-4xl font-bold text-gray-100 mb-8">Counter App</h1>
+  <main class="min-h-screen bg-gray-900 px-4 py-12 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-7xl">
+      <h1 class="mb-8 text-4xl font-bold text-gray-100">Counter App</h1>
 
       <div class="flex flex-col items-center space-y-6">
         <div class="text-6xl font-bold text-gray-200">
@@ -13,7 +13,7 @@
             variant="outline"
             size="lg"
             @click="decrement"
-            class="text-gray-800 border-gray-700 hover:bg-gray-300"
+            class="border-gray-700 text-gray-800 hover:bg-gray-300"
           >
             Decrease
           </Button>
@@ -31,7 +31,7 @@
             variant="outline"
             size="lg"
             @click="increment"
-            class="text-gray-800 border-gray-700 hover:bg-gray-300"
+            class="border-gray-700 text-gray-800 hover:bg-gray-300"
           >
             Increase
           </Button>
@@ -41,12 +41,12 @@
   </main>
 </template>
 <script setup>
-import { ref } from "vue";
-import Button from "@/components/ui/button/Button.vue";
+  import { ref } from 'vue';
+  import Button from '@/components/ui/button/Button.vue';
 
-const count = ref(0);
+  const count = ref(0);
 
-const increment = () => count.value++;
-const decrement = () => count.value--;
-const reset = () => (count.value = 0);
+  const increment = () => count.value++;
+  const decrement = () => count.value--;
+  const reset = () => (count.value = 0);
 </script>

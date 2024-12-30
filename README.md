@@ -86,14 +86,12 @@ vue-tailwind-shadcn-starter-template/
 └── README.md # Project documentation
 ```
 
-Scripts
+### Scripts
 
 ```bash
 npm run dev: Start the development server.
 
 npm run build: Build the application for production.
-
-npm run lint: Run ESLint for code quality.
 
 npm run preview: Preview the production build locally.
 ```
@@ -104,7 +102,7 @@ npm run preview: Preview the production build locally.
 
   Custom configurations can be made in tailwind.config.js.
 
-  Additional styles can be added in src/styles/.
+  Additional styles can be added in src/assets/css/index.css.
 
 - Vue Router
 
@@ -114,21 +112,17 @@ npm run preview: Preview the production build locally.
 
 ### Versions
 
-- Vue.js: ^3.2.0
+- Vue.js: ^3.5.13
 
-- Vue Router: ^4.0.0
+- Vue Router: ^4.5.0
 
-- Tailwind CSS: ^3.0.0
+- Tailwind CSS: ^3.4.17
 
-- ShadCN Components: ^1.0.0
+- Radix-vue: ^1.9.12
 
 ### Contributing
 
 Feel free to fork the repository and submit pull requests. All contributions are welcome!
-
-### License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
 
 ### Support
 

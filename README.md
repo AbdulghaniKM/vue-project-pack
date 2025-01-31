@@ -4,6 +4,10 @@
 
 A modern, production-ready starter template for building Vue.js applications with the power of Tailwind CSS and ShadCN components. This template emphasizes developer experience, performance, and best practices.
 
+## Live Demo
+
+[Live Demo](https://vue-project-pack.vercel.app/)
+
 ## ⚡️ Key Technologies
 
 - 🚀 Vue 3 with Composition API
@@ -51,7 +55,7 @@ A modern, production-ready starter template for building Vue.js applications wit
 
 ```bash
 git clone https://github.com/AbdulghaniKM/vue-project-pack.git
-cd vue-tailwind-shadcn-starter-template
+cd vue-project-pack
 ```
 
 2. Install dependencies:
@@ -69,7 +73,7 @@ npm run dev
 ### Project Structure
 
 ```bash
-vue-tailwind-shadcn-starter-template/
+vue-project-pack/
 ├── public/ # Static assets
 ├── src/
 │ ├── assets/ # Project assets

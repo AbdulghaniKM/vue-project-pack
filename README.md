@@ -4,34 +4,41 @@
 
 A modern, production-ready starter template for building Vue.js applications with the power of Tailwind CSS and ShadCN components. This template emphasizes developer experience, performance, and best practices.
 
-### Key Technologies
+## ⚡️ Key Technologies
 
-- 🚀 **Vue 3** with Composition API
-- 🎨 **Tailwind CSS** for utility-first styling
-- 🧩 **ShadCN** for beautiful, accessible UI components
-- 📱 **Vue Router** for seamless navigation
-- ⚡️ **Vite** for lightning-fast development
+- 🚀 Vue 3 with Composition API
+- 🎨 Tailwind CSS for utility-first styling
+- 🧩 ShadCN for beautiful, accessible UI components
+- 📱 Vue Router for seamless navigation
+- ⚡️ Vite for lightning-fast development
+- 🌟 Pinia for state management
+- 🖼️ Iconify Icons for high-quality icons
+- 🌐 Axios for HTTP requests
 
-## Features
+## ✨ Features
 
-✨ **Modern Development Stack**
+### Modern Development Stack
 
 - Vue 3 Composition API with script setup syntax
 - Single File Components (SFCs) for modular development
+- State management with Pinia
+- High-quality icons via Iconify
 
-🎯 **Pre-configured Tools**
+### Pre-configured Tools
 
 - Vue Router with automatic route generation
 - Tailwind CSS with custom configuration and dark mode support
 - ShadCN components pre-styled and ready to use
-- Prettier and prettier-plugin-tailwindcss for consistent code style and formatting/class sorting
+- Prettier and prettier-plugin-tailwindcss for consistent code style
+- TailwindCSS animation plugins for enhanced UI interactions
 
-🏗️ **Architecture**
+### Architecture
 
-- Scalable folder structure following best practices
+- Scalable folder structure following Vue best practices
 - Component-driven development approach
+- Type-safe development environment
 
-## Quick Start
+## 🚀 Getting Started
 
 ### Prerequisites
 
@@ -43,7 +50,7 @@ A modern, production-ready starter template for building Vue.js applications wit
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/AbdulghaniKM/vue-tailwind-shadcn-starter-template.git
+git clone https://github.com/AbdulghaniKM/vue-project-pack.git
 cd vue-tailwind-shadcn-starter-template
 ```
 
@@ -53,13 +60,13 @@ cd vue-tailwind-shadcn-starter-template
 npm install
 ```
 
-3. Running the Development Server
+### Running the Development Server
 
 ```bash
 npm run dev
 ```
 
-4. Project Structure
+### Project Structure
 
 ```bash
 vue-tailwind-shadcn-starter-template/
@@ -72,6 +79,7 @@ vue-tailwind-shadcn-starter-template/
 │ ├── lib/ # Utility functions
 │ ├── pages/ # Vue Router page components
 │ ├── router/ # Vue Router configuration
+│ ├── stores/ # Pinia state management stores
 │ ├── App.vue # Root component
 │ └── main.js # Application entry point
 ├── .prettierrc # Prettier configuration
@@ -90,40 +98,56 @@ vue-tailwind-shadcn-starter-template/
 
 ```bash
 npm run dev: Start the development server.
-
 npm run build: Build the application for production.
-
 npm run preview: Preview the production build locally.
 ```
 
 ### Configuration
 
-- Tailwind CSS
+#### Tailwind CSS
 
-  Custom configurations can be made in tailwind.config.js.
+Custom configurations can be made in tailwind.config.js.
+Additional styles can be added in src/assets/css/index.css.
 
-  Additional styles can be added in src/assets/css/index.css.
+#### Vue Router
 
-- Vue Router
+Add or modify routes in src/router/index.js.
+Page components are stored in src/pages/.
 
-  Add or modify routes in src/router/index.js.
+#### Pinia
 
-  Page components are stored in src/pages/.
+State management stores are located in src/stores/.
 
-### Versions
+#### Versions
 
-- Vue.js: ^3.5.13
+Vue.js: ^3.5.13
+Vue Router: ^4.5.0
+Tailwind CSS: ^3.4.17
+Radix-vue: ^1.9.12
+Pinia: ^2.3.1
+Axios: ^1.7.9
+Iconify: ^4.3.0
 
-- Vue Router: ^4.5.0
+#### Dependencies
 
-- Tailwind CSS: ^3.4.17
+Utility Libraries : class-variance-authority, clsx, tailwind-merge
+Animations : tailwindcss-animate, tailwindcss-motion
+Icons : @iconify/vue
 
-- Radix-vue: ^1.9.12
+#### Dev Dependencies
 
-### Contributing
+Build Tools : vite, @vitejs/plugin-vue
+PostCSS Plugins : autoprefixer, postcss
+Code Formatting : prettier, prettier-plugin-tailwindcss
+
+#### Contributing
 
 Feel free to fork the repository and submit pull requests. All contributions are welcome!
 
-### Support
+#### Support
 
 For questions or help, feel free to reach out via GitHub Issues.
+
+## 🌟 Show your support
+
+Give a ⭐️ if this project helped you!

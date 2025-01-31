@@ -1,8 +1,8 @@
 <script setup>
   import { cn } from '@/lib/utils';
+  import { Icon } from '@iconify/vue';
   import { Primitive } from 'radix-vue';
   import { buttonVariants } from '.';
-  import { Icon } from '@iconify/vue';
 
   const props = defineProps({
     variant: { type: null, required: false },
@@ -13,6 +13,7 @@
     iconPosition: { type: String, default: 'start' },
     icon: { type: String, required: false },
     iconClass: { type: String, default: 'h-5 w-5' },
+    animationClass: { type: String, required: false },
   });
 </script>
 
@@ -20,7 +21,14 @@
   <Primitive
     :as="as"
     :as-child="asChild"
-    :class="cn(buttonVariants({ variant, size }), 'inline-flex items-center gap-2', props.class)"
+    :class="
+      cn(
+        buttonVariants({ variant, size }),
+        'inline-flex items-center gap-2',
+        props.animationClass,
+        props.class
+      )
+    "
   >
     <Icon
       v-if="icon && iconPosition === 'start'"

@@ -1,68 +1,218 @@
 <template>
-  <main class="min-h-screen px-4 py-12 bg-gray-900 sm:px-6 lg:px-8">
-    <div class="mx-auto max-w-7xl">
-      <h1 class="mb-8 text-4xl font-bold text-gray-100">Counter App</h1>
-      <div class="flex flex-col items-center space-y-6">
-        <div class="text-6xl font-bold text-gray-200">
-          {{ store.count }}
-        </div>
-        <div class="flex space-x-4">
-          <Button
-            variant="outline"
-            size="lg"
-            @click="decrement"
-            class="text-gray-800 border-gray-700 hover:bg-gray-300"
-            icon="line-md:minus"
-            icon-class="w-12 h-12 text-black"
+  <main class="min-h-screen bg-gradient-to-br from-[#030712] via-[#0F1117] to-[#1F2937]">
+    <!-- Hero Section -->
+    <div class="px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+          Vue Project Pack
+          <span
+            class="mt-2 block bg-gradient-to-r from-[#FACC15] to-[#EAB308] bg-clip-text text-transparent"
           >
-            Decrease
-          </Button>
-
+            Starter Template
+          </span>
+        </h1>
+        <p class="mx-auto mt-6 max-w-2xl text-lg text-[#E5E7EB]">
+          A modern, production-ready starter template emphasizing developer experience, performance,
+          and best practices.
+        </p>
+        <div class="flex justify-center gap-4 mt-8">
           <Button
             variant="default"
             size="lg"
-            @click="reset"
-            class="text-gray-200 bg-gray-800 hover:bg-gray-700"
-            icon="weui:refresh-filled"
-            icon-class="w-12 h-12 text-white"
+            class="bg-[#24292E] text-white transition-colors duration-200 hover:bg-[#2F363D]"
+            icon="mdi:github"
+            icon-class="w-5 h-5 mr-2"
+            @click="redirectTo('https://github.com/AbdulghaniKM/vue-project-pack')"
           >
-            Reset
+            Star on GitHub
           </Button>
-
           <Button
-            variant="outline"
+            variant="primary"
             size="lg"
-            @click="increment"
-            class="text-gray-800 border-gray-700 hover:bg-gray-300"
-            icon="line-md:plus"
-            icon-class="w-5 h-5 text-black"
+            class="border border-[#FACC15] text-white transition-colors duration-200 hover:bg-[#FACC15]/10"
+            icon="mdi:linkedin"
+            icon-class="w-5 h-5 mr-2 text-[#FACC15]"
+            @click="redirectTo('https://www.linkedin.com/in/abdulghani-khalid-mohsin-647278243/')"
           >
-            Increase
+            Connect on LinkedIn
           </Button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Grid -->
+    <div class="px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Tech Stack -->
+        <div
+          class="rounded-lg border border-[#1F2937] bg-[#030712]/80 p-6 backdrop-blur-sm transition-colors duration-200 hover:bg-[#1F2937]/50"
+        >
+          <div class="flex items-center mb-4">
+            <Icon
+              icon="ph:stack-duotone"
+              class="h-6 w-6 text-[#FACC15]"
+            />
+            <h3 class="ml-3 text-xl font-semibold text-white">Modern Stack</h3>
+          </div>
+          <ul class="space-y-2 text-[#E5E7EB]">
+            <li class="flex items-center">
+              <Icon
+                icon="logos:vue"
+                class="w-4 h-4 mr-2"
+              />
+              Vue 3 with Composition API
+            </li>
+            <li class="flex items-center">
+              <Icon
+                icon="logos:tailwindcss-icon"
+                class="w-4 h-4 mr-2"
+              />
+              Tailwind CSS
+            </li>
+            <li class="flex items-center">
+              <svg
+                class="w-4 h-4 mr-2"
+                viewBox="0 0 256 256"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_102_1338)">
+                  <path
+                    d="M208 128L128 208"
+                    stroke="#41B883"
+                    stroke-width="16"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M192 40L40 192"
+                    stroke="#41B883"
+                    stroke-width="16"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </g>
+                <defs>
+                  <clipPath id="clip0_102_1338">
+                    <rect
+                      width="256"
+                      height="256"
+                      fill="white"
+                    ></rect>
+                  </clipPath>
+                </defs>
+              </svg>
+              ShadCN Components
+            </li>
+          </ul>
+        </div>
+
+        <!-- Tools -->
+        <div
+          class="rounded-lg border border-[#1F2937] bg-[#030712]/80 p-6 backdrop-blur-sm transition-colors duration-200 hover:bg-[#1F2937]/50"
+        >
+          <div class="flex items-center mb-4">
+            <Icon
+              icon="ph:wrench-duotone"
+              class="h-6 w-6 text-[#FACC15]"
+            />
+            <h3 class="ml-3 text-xl font-semibold text-white">Pre-configured</h3>
+          </div>
+          <ul class="space-y-2 text-[#E5E7EB]">
+            <li class="flex items-center">
+              <Icon
+                icon="material-symbols:route"
+                class="mr-2 h-4 w-4 text-[#FACC15]"
+              />
+              Vue Router
+            </li>
+            <li class="flex items-center">
+              <Icon
+                icon="ph:database-duotone"
+                class="mr-2 h-4 w-4 text-[#FACC15]"
+              />
+              Pinia State Management
+            </li>
+            <li class="flex items-center">
+              <Icon
+                icon="ph:wave-sine-duotone"
+                class="mr-2 h-4 w-4 text-[#FACC15]"
+              />
+              Rombo Animation Plugin
+            </li>
+          </ul>
+        </div>
+
+        <!-- Architecture -->
+        <div
+          class="rounded-lg border border-[#1F2937] bg-[#030712]/80 p-6 backdrop-blur-sm transition-colors duration-200 hover:bg-[#1F2937]/50"
+        >
+          <div class="flex items-center mb-4">
+            <Icon
+              icon="ph:tree-structure-duotone"
+              class="h-6 w-6 text-[#FACC15]"
+            />
+            <h3 class="ml-3 text-xl font-semibold text-white">Architecture</h3>
+          </div>
+          <ul class="space-y-2 text-[#E5E7EB]">
+            <li class="flex items-center">
+              <Icon
+                icon="ph:folders-duotone"
+                class="mr-2 h-4 w-4 text-[#FACC15]"
+              />
+              Scalable Structure
+            </li>
+            <li class="flex items-center">
+              <Icon
+                icon="material-symbols:view-module"
+                class="mr-2 h-4 w-4 text-[#FACC15]"
+              />
+              Component-Driven
+            </li>
+            <li class="flex items-center">
+              <Icon
+                icon="ph:code-duotone"
+                class="mr-2 h-4 w-4 text-[#FACC15]"
+              />
+              Type-Safe Development
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Start -->
+    <div class="px-4 py-8 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <div class="rounded-lg border border-[#1F2937] bg-[#030712]/80 p-8 backdrop-blur-sm">
+        <h2 class="flex items-center text-2xl font-bold text-white">
+          <Icon
+            icon="ph:terminal-window-duotone"
+            class="mr-2 h-6 w-6 text-[#FACC15]"
+          />
+          Quick Start
+        </h2>
+        <div class="mt-4 overflow-hidden font-mono text-sm rounded-lg">
+          <div class="border border-[#1F2937] bg-[#030712] p-4">
+            <p class="text-[#6B7280]"># Clone the repository</p>
+            <p class="text-[#FACC15]">
+              git clone https://github.com/AbdulghaniKM/vue-project-pack.git
+            </p>
+            <p class="mt-2 text-[#6B7280]"># Install dependencies</p>
+            <p class="text-[#FACC15]">npm install</p>
+            <p class="mt-2 text-[#6B7280]"># Start development server</p>
+            <p class="text-[#FACC15]">npm run dev</p>
+          </div>
         </div>
       </div>
     </div>
   </main>
 </template>
+
 <script setup>
-  import { ref, onMounted } from 'vue';
   import Button from '@/components/ui/button/Button.vue';
-  import { useCounterStore } from '@/stores/useCounterStore';
-  import { Axios } from '@/plugins/axios';
-  const store = useCounterStore();
-  const posts = ref([]);
+  import { Icon } from '@iconify/vue';
 
-  onMounted(async () => {
-    try {
-      const response = await Axios.get('/posts');
-      posts.value = response.data;
-      console.log('Posts fetched:', posts.value);
-    } catch (error) {
-      console.error('Error fetching posts:', error);
-    }
-  });
-
-  const increment = () => store.increment();
-  const decrement = () => store.decrement();
-  const reset = () => store.reset();
+  const redirectTo = (url) => {
+    window.open(url, '_blank');
+  };
 </script>

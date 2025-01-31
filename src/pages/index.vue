@@ -15,7 +15,7 @@
           A modern, production-ready starter template emphasizing developer experience, performance,
           and best practices.
         </p>
-        <div class="flex justify-center gap-4 mt-8">
+        <div class="flex flex-col justify-center gap-4 mt-8 sm:flex-row">
           <Button
             variant="default"
             size="lg"
